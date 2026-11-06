@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body text-slate-900 antialiased;
+  }
+
+  a {
+    @apply text-sky-800;
+  }
+}
