@@ -2,9 +2,9 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { fileURLToPath, URL } from "node:url";
 
-// GitHub Pages serves project sites at /<repo-name>/ (e.g. /learn-chess/)
+// Relative URLs work on GitHub Pages for any repo name or custom domain.
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/learn-chess/" : "/",
+  base: mode === "production" ? "./" : "/",
   plugins: [react()],
   resolve: {
     alias: {

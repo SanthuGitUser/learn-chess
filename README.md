@@ -31,10 +31,10 @@ npm run build
 npm run preview
 ```
 
-The production build uses base path **`/learn-chess/`** so it works on GitHub Pages at  
-`https://<user>.github.io/learn-chess/`. Local dev still uses `/`.
+Production uses **relative asset URLs** (`./`) so it works on GitHub Pages at  
+`https://<user>.github.io/<repo>/` for any repo name. Routing uses **`#/`** in the URL (HashRouter) so refreshes and deep links work without server config.
 
-**GitHub Pages:** enable Pages (Actions or deploy the `dist` folder), then copy the contents of `dist/` to the published branch/folder. After updating the site, redeploy so `index.html` loads JS/CSS from `/learn-chess/assets/...`.
+**Deploy:** Push to `main` — the workflow in `.github/workflows/deploy-pages.yml` builds and publishes `dist/` to GitHub Pages. In the repo **Settings → Pages**, set **Source** to **GitHub Actions**. For a first-time setup you may need to allow workflows under **Actions**.
 
 ## Teaching your 4-year-old
 
