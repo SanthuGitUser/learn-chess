@@ -34,7 +34,11 @@ npm run preview
 Production uses **relative asset URLs** (`./`) so it works on GitHub Pages at  
 `https://<user>.github.io/<repo>/` for any repo name. Routing uses **`#/`** in the URL (HashRouter) so refreshes and deep links work without server config.
 
-**Deploy:** Push to `main` — the workflow in `.github/workflows/deploy-pages.yml` builds and publishes `dist/` to GitHub Pages. In the repo **Settings → Pages**, set **Source** to **GitHub Actions**. For a first-time setup you may need to allow workflows under **Actions**.
+**Deploy:** See **[DEPLOY.md](./DEPLOY.md)**. The workflow in `.github/workflows/deploy-pages.yml` builds and publishes **`dist/`** only.
+
+**Blank page + Network shows `main.tsx` 404?** GitHub Pages is serving the repo root instead of the build. Set **Settings → Pages → Source: GitHub Actions**, not “Deploy from branch” pointing at raw source.
+
+Open the app at **`https://<user>.github.io/<repo>/#/`** (hash routes for static hosting).
 
 ## Teaching your 4-year-old
 
